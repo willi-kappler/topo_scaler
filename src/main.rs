@@ -4,7 +4,6 @@ mod process_topography;
 mod error;
 
 use crate::process_topography::process_config;
-use crate::error::ProcessError;
 
 #[derive(StructOpt, Debug)]
 #[structopt(name = "basic")]

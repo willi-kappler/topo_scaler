@@ -60,7 +60,7 @@ pub fn process_config(options: super::CLOptions) -> Result<(), ProcessError> {
     let mut output_file = BufWriter::new(file);
 
     for value in scaled_topography {
-        write!(output_file, "{}\n", value);
+        write!(output_file, "{}\n", value)?;
     }
 
     Ok(())
