@@ -26,7 +26,9 @@ pub fn process_config(options: super::CLOptions) -> Result<(), ProcessError> {
     for line in input_file.lines() {
         let value: f64 = line?.parse()?;
 
-        output_topography[(output_y * output_cols) + output_x] += value;
+        if output_x < output_cols && output_y < output_rows {
+            output_topography[(output_y * output_cols) + output_x] += value;
+        }
 
         cell_x += 1;
         if cell_x >= cell_size {
