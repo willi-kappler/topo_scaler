@@ -58,7 +58,7 @@ pub fn process_config(options: super::CLOptions) -> Result<(), ProcessError> {
 
     let scaled_topography =  output_topography.iter().map(|value| value / ((cell_size * cell_size) as f64));
 
-    let file = File::open(options.output_file)?;
+    let file = File::create(options.output_file)?;
     let mut output_file = BufWriter::new(file);
 
     for value in scaled_topography {
