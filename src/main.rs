@@ -6,7 +6,6 @@ mod error;
 use crate::process_topography::process_config;
 
 #[derive(StructOpt, Debug)]
-#[structopt(name = "basic")]
 pub struct CLOptions {
     /// Number of rows in the input file
     #[structopt(long = "rows")]
