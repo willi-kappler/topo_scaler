@@ -12,7 +12,7 @@ pub fn process_config(options: super::CLOptions) -> Result<(), ProcessError> {
     let output_cols: usize = options.num_of_cols / cell_size;
     let output_rows: usize = options.num_of_rows / cell_size;
 
-    let mut output_topography: Vec<f64> = Vec::with_capacity((output_cols * output_rows) as usize);
+    let mut output_topography: Vec<f64> = vec![0.0; (output_cols * output_rows) as usize];
 
     let mut input_x: usize = 0;
     let mut input_y: usize = 0;
