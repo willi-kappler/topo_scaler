@@ -1,0 +1,8 @@
+[package]
+name = "topo_scaler"
+version = "0.1.0"
+authors = ["Willi Kappler <grandor@gmx.de>"]
+edition = "2018"
+
+[dependencies]
+structopt = "0.2"
